@@ -1,0 +1,69 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.8.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: "idea"
+apply plugin: "war"
+
+compileJava.options.encoding = 'UTF-8'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.example.kardex.MainApplication'
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+
+    compile("org.springframework.boot:spring-boot-starter-security")
+    // Libreria para crear y validar token de seguridad JSON
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+
+    compile group: 'io.springfox',name: 'springfox-swagger2', version: '2.9.2'
+    compile group: 'io.springfox',name: 'springfox-swagger-ui', version: '2.9.2'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+
+    //hibernate
+    compile("org.hibernate:hibernate-core:5.2.9.Final")
+    compile("org.hibernate:hibernate-entitymanager:5.2.9.Final")
+    compile("org.hibernate:hibernate-validator:5.4.1.Final")
+    compile("org.hibernate.common:hibernate-commons-annotations:5.0.1.Final")
+    compile("org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final")
+
+    compile ('joda-time:joda-time:2.10.8')
+
+    //TEST
+    compile("com.h2database:h2")
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+test {
+    useJUnitPlatform()
+}

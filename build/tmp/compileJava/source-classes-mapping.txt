@@ -1,0 +1,70 @@
+org/example/kardex/domain/dto/CustomerDto.java
+ org.example.kardex.domain.dto.CustomerDto
+ org.example.kardex.domain.dto.CustomerDto$CustomerDtoBuilder
+org/example/kardex/domain/PurchaseDetail.java
+ org.example.kardex.domain.PurchaseDetail
+ org.example.kardex.domain.PurchaseDetail$PurchaseDetailBuilder
+org/example/kardex/repositories/CustomerRepository.java
+ org.example.kardex.repositories.CustomerRepository
+org/example/kardex/config/SwaggerConfiguration.java
+ org.example.kardex.config.SwaggerConfiguration
+org/example/kardex/service/CustomerService.java
+ org.example.kardex.service.CustomerService
+org/example/kardex/service/impl/CustomerServiceImpl.java
+ org.example.kardex.service.impl.CustomerServiceImpl
+org/example/kardex/MainApplication.java
+ org.example.kardex.MainApplication
+org/example/kardex/domain/dto/ReponseDto.java
+ org.example.kardex.domain.dto.ReponseDto
+ org.example.kardex.domain.dto.ReponseDto$ReponseDtoBuilder
+org/example/kardex/controller/ProductController.java
+ org.example.kardex.controller.ProductController
+org/example/kardex/controller/UserController.java
+ org.example.kardex.controller.UserController
+org/example/kardex/domain/dto/ErrorsDto.java
+ org.example.kardex.domain.dto.ErrorsDto
+ org.example.kardex.domain.dto.ErrorsDto$ErrorsDtoBuilder
+org/example/kardex/service/ProductService.java
+ org.example.kardex.service.ProductService
+org/example/kardex/config/TokenJWT.java
+ org.example.kardex.config.TokenJWT
+org/example/kardex/domain/response/LoginTokenRsp.java
+ org.example.kardex.domain.response.LoginTokenRsp
+org/example/kardex/controller/CustomerController.java
+ org.example.kardex.controller.CustomerController
+org/example/kardex/domain/Product.java
+ org.example.kardex.domain.Product
+ org.example.kardex.domain.Product$ProductBuilder
+org/example/kardex/repositories/PurchaseRepository.java
+ org.example.kardex.repositories.PurchaseRepository
+org/example/kardex/service/PurchaseService.java
+ org.example.kardex.service.PurchaseService
+org/example/kardex/domain/Customer.java
+ org.example.kardex.domain.Customer
+ org.example.kardex.domain.Customer$CustomerBuilder
+org/example/kardex/controller/PurchaseController.java
+ org.example.kardex.controller.PurchaseController
+org/example/kardex/service/impl/ProductServiceImpl.java
+ org.example.kardex.service.impl.ProductServiceImpl
+org/example/kardex/domain/dto/UserDto.java
+ org.example.kardex.domain.dto.UserDto
+ org.example.kardex.domain.dto.UserDto$UserDtoBuilder
+org/example/kardex/config/JWTAuthorizationFilter.java
+ org.example.kardex.config.JWTAuthorizationFilter
+org/example/kardex/repositories/PurchaseDetailRepository.java
+ org.example.kardex.repositories.PurchaseDetailRepository
+org/example/kardex/repositories/ProductRepository.java
+ org.example.kardex.repositories.ProductRepository
+org/example/kardex/domain/Purchase.java
+ org.example.kardex.domain.Purchase
+ org.example.kardex.domain.Purchase$PurchaseBuilder
+org/example/kardex/exception/ExceptionsBussines.java
+ org.example.kardex.exception.ExceptionsBussines
+ org.example.kardex.exception.ExceptionsBussines$ExceptionsBussinesBuilder
+org/example/kardex/domain/dto/ProductDto.java
+ org.example.kardex.domain.dto.ProductDto
+ org.example.kardex.domain.dto.ProductDto$ProductDtoBuilder
+org/example/kardex/config/WebSecurityConfig.java
+ org.example.kardex.config.WebSecurityConfig
+org/example/kardex/service/impl/PurchaseServiceImpl.java
+ org.example.kardex.service.impl.PurchaseServiceImpl
