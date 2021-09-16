@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class PurchaseDetail {
 	@Id
 	@JsonProperty("id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Long count;
 	private Double price;

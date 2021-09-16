@@ -1,7 +1,9 @@
 package org.example.kardex.controller;
 
 import java.util.List;
+
 import org.example.kardex.domain.Purchase;
+import org.example.kardex.domain.dto.PurchaseDto;
 import org.example.kardex.service.PurchaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,7 +35,7 @@ public class PurchaseController {
 	}
 
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<Purchase> buyProduct(@RequestBody Purchase buy) {
+	public ResponseEntity<Purchase> buyProduct(@RequestBody PurchaseDto buy) throws Exception {
 		return new ResponseEntity<>(this.purchaseService.buyProduct(buy), HttpStatus.CREATED);
 	}
 }

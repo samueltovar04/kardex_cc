@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
-	@Query(value = "SELECT id, user_name, password FROM customer WHERE id = :id_user and password = :password", nativeQuery = true)
-	Optional<Customer> findByIdUser (@Param("id_user") Long idUser,@Param("password") String password);
-
+/*	@Query(value = "SELECT id, user_name, password FROM customer WHERE id = :id_user and password = :password", nativeQuery = true)
+	Optional<Customer> findByIdUser (@Param("id_user") Long idUser,@Param("password") String password);*/
+	Optional<Customer> findByIdAndPassword(Long id, String password);
 }

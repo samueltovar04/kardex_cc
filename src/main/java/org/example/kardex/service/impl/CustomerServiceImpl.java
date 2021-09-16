@@ -38,8 +38,10 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public Optional<UserDto> validateUser(UserDto req) {
 		return customerRepository
-			.findByIdUser(req.getIdUser(), req.getPassword())
+			.findByIdAndPassword(req.getIdUser(), req.getPassword())
 			.map(this::mapper);
+/*		Customer customer = customerRepository.findOne(req.getIdUser());
+		return Optional.of(this.mapper(customer));*/
 	}
 
 	@Override

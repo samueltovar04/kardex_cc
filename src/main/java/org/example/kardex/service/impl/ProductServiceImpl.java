@@ -1,15 +1,16 @@
 package org.example.kardex.service.impl;
 
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 import org.example.kardex.domain.Product;
 import org.example.kardex.domain.dto.ProductDto;
 import org.example.kardex.repositories.ProductRepository;
 import org.example.kardex.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -44,14 +45,16 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public void updateStock(Long idProduct, Long count) {
+	public ProductDto updateStock(Long idProduct, Long count) {
 		Optional<ProductDto> product = this.getById(idProduct);
+		ProductDto[] productDto = new ProductDto[1];
 		product.ifPresent(
 			pdto -> {
 				pdto.setCount(pdto.getCount() - count);
-				this.update(pdto);
+				productDto[0] = this.update(pdto);
 			}
 		);
+		return productDto[0];
 	}
 
 	private Product mapperProduct(ProductDto pro){
